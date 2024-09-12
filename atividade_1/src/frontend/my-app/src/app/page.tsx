@@ -1,4 +1,10 @@
+import Link from 'next/link';
+
+
 export default function Home() {
+
+
+
   return (
     <div className="bg-amber-50 min-h-screen flex flex-col items-center justify-center">
       <div>
@@ -6,12 +12,15 @@ export default function Home() {
           Bem-Vindo! Preveja seus Bitcoins
         </p>
         <div className="flex space-x-4 text-center justify-center">
+
           <button className="text-slate-950 text-2xl text-center font-bold bg-amber-200 rounded-lg p-2 w-auto">
             Base Treinada
           </button>
-          <button className="text-slate-950 text-2xl text-center font-bold bg-amber-200 rounded-lg p-2 w-auto">
-            Treinar
-          </button>
+          <Link href='insereBase'>
+            <button className="text-slate-950 text-2xl text-center font-bold bg-amber-200 rounded-lg p-2 w-auto">
+              Treinar
+            </button>
+          </Link>
         </div>
       </div>
     </div>
