@@ -1,7 +1,35 @@
 import { useState } from "react";
 import "../app/globals.css";
 
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import axios from "axios";
+
+
+
 export default function InsereBase() {
+
+  const router = useRouter();
+
+  const handleBaseTreinadaClick = async () => {
+    try {
+
+      const response = await axios.get('http://localhost:8000/executar/modelo');
+
+      console.log('Resposta da API:', response.data);
+
+      router.push('/results')
+
+    } catch (error) {
+      console.error('Erro na rota /executar/modelo', error)
+    }
+
+  }
+
+
+
+
+
   const [file, setFile] = useState(null);
 
   const handleFileChange = (e) => {
@@ -12,7 +40,7 @@ export default function InsereBase() {
 
   const handleButtonClick = () => {
     document.getElementById("fileInput").click();
-  };  
+  };
 
   const handleUpload = async () => {
     if (!file) {
@@ -63,6 +91,13 @@ export default function InsereBase() {
       </button>
 
       {file && <p className="text-black mt-4">Arquivo selecionado: {file.name}</p>}
+
+      <br />
+
+      <button onClick={handleBaseTreinadaClick} className="text-slate-950 text-2xl text-center font-bold bg-amber-200 rounded-lg p-2 w-auto">
+        Base Treinada
+      </button>
+
     </div>
   );
 }
