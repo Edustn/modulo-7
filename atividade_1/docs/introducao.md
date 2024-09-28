@@ -16,3 +16,8 @@ Então na primeira tela terá dois botões, o botão `Base Treinada` que irá ge
 
 Obs: as novas bases devem ser salvas com o nome `bitcoins.csv` para que o sistema execute tudo com sucesso.
 
+# Backen e PostgreSQL
+
+Analisando o arquivo `main.py` disposto na pasta backend é nesse arquivo que estão dispostas as rotas desse sistema que executam a preição do modelo, acessam o banco de dados para o salvamento dos logs e faz o upload dos arquivos selecionados para que o modelo possa ser retreinado.
+
+Com base nessa breve explicação do backend, optou-se por utilizar um banco de dados relacional, o PostgreSQL, para armazenar os logs do sistema sempre que uma rota do backend é acessada. A escolha de não adotar um datalake foi fundamentada pela natureza dos dados e os objetivos do projeto. Como os logs já são gerados em um formato estruturado e refinado, o uso de um datalake, que geralmente é mais adequado para lidar com grandes volumes de dados brutos e não estruturados, não se mostrou necessário. Além disso, bancos de dados relacionais, como o PostgreSQL, oferecem melhor performance e eficiência na consulta e manipulação de dados estruturados, o que se alinha perfeitamente à necessidade de rastrear e gerenciar logs de maneira organizada e rápida.
