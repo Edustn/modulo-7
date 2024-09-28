@@ -9,3 +9,10 @@ Sendo assim, os modelos escolhidos para esse projetos forma: GARCH e o Arima. Ca
 # Execução do projeto:
 
 Por fim esse projeto pode ser executado da seguindo os passos abaixo:
+
+Entre em `atividade_1/src` e execute o comando `docker compose up --build`
+
+Então na primeira tela terá dois botões, o botão `Base Treinada` que irá gerar resultados da base já disposta no sistema. Já o segundo botão, `Treinar` irá redirecionar para outra página que contêm três botões para escolha de uma nova base para haver o treino com os novos dados. Sendo assim, o botão `Escolher base` é responsável por entrar no explorar do sistema operacional Windows e possibilitar que o usuário possa selecionar a base desejada para retreino do modelo. Após esse processo o botão `Enviar base` aloca a nova base dentro da nossa pasta que está executando o modelo. Por fim, o botão `Base Treinada` realiza a previsão baseado nos dados da nova base e apresentam os resultados para o usuário. 
+
+Obs: as novas bases devem ser salvas com o nome `bitcoins.csv` para que o sistema execute tudo com sucesso.
+
