@@ -20,7 +20,7 @@ def connect_db():
         dbname="eu_banco",
         user="usuario",
         password="senha",
-        host="localhost",
+        host="db",
         port="5432"
     )
     return conn
@@ -117,4 +117,4 @@ async def get_logs():
     return {"logs": logs}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8000)

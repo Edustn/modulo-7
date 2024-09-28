@@ -3,7 +3,7 @@ services:
     image: postgres:latest
     restart: unless-stopped
     ports:
-      - ${AM_DATABASE_PORT:-5432}:5432
+      - 5432:5432
     environment:
       POSTGRES_USER: usuario
       POSTGRES_PASSWORD: senha
@@ -23,6 +23,26 @@ services:
       PGADMIN_DEFAULT_PASSWORD: password
     volumes:
       - pgadmin:/var/lib/pgadmin
+
+  backend:
+    build: ./backend
+    image: src/backend
+    restart: unless-stopped
+    # environment:
+    #   DATABASE_URL: "postgresql://usuario:senha@db:5432/eu_banco" # Corrigido de "postgres" para "db"
+    #   # POCKETBASE_URL: "http://pocketbase:8090"
+    ports:
+      - 8000:8000
+    depends_on:
+      - db # Corrigido de "postgres" para "db"
+      # - pocketbase
+
+  frontend:
+    build: ./frontend/my-app
+    image: my-app/frontend
+    restart: unless-stopped
+    ports:
+      - 7000:7000
 
 volumes:
   db:
