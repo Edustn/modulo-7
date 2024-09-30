@@ -8,6 +8,9 @@ import uvicorn
 from modelo import executar_modelo
 import psycopg2
 from datetime import datetime
+from grafico import grafico
+from fastapi.responses import FileResponse
+
 
 app = FastAPI()
 
@@ -116,5 +119,11 @@ async def get_logs():
 
     return {"logs": logs}
 
-if __name__ == "__main__":
+@app.get("/dash")
+def dahs():
+    grafico()
+    image_path = BASE_DIR / "volatilidade_garch.png"
+    return FileResponse(image_path)
+
+if __name__ == "__main__":  
     uvicorn.run(app, host="0.0.0.0", port=8000)

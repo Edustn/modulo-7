@@ -17,10 +17,11 @@ Entre em `atividade_1/src` e execute o comando `docker compose up --build`
 
 Então na primeira tela terá dois botões, o botão `Base Treinada` que irá gerar resultados da base já disposta no sistema. Já o segundo botão, `Treinar` (que faz o retreino do modelo) irá redirecionar para outra página que contêm três botões para escolha de uma nova base para haver o treino com os novos dados. Sendo assim, o botão `Escolher base` é responsável por entrar no explorar do sistema operacional Windows e possibilitar que o usuário possa selecionar a base desejada para retreino do modelo. Após esse processo o botão `Enviar base` aloca a nova base dentro da nossa pasta que está executando o modelo. Por fim, o botão `Base Treinada` realiza a previsão baseado nos dados da nova base e apresentam os resultados para o usuário. 
 
+Por fim, exite o botão `Gráfico` que demostra o gráfico gerado do modelo e pode-se ter uma visualização mais ampla. 
+
 Obs: as novas bases devem ser salvas com o nome `bitcoins.csv` para que o sistema execute tudo com sucesso.
 
-Sendo assim, no vídeo diponível no link abaixo é possível visualizar o funcionamento do treino e do retreino do modelo: [https://drive.google.com/file/d/1dB_KSsSZLV9lGZQabTRPLVcSxlyI9nq8/view?usp=sharing](https://drive.google.com/file/d/1dB_KSsSZLV9lGZQabTRPLVcSxlyI9nq8/view?usp=sharing) 
-
+Sendo assim, no vídeo diponível no link abaixo é possível visualizar o funcionamento do treino e do retreino do modelo, além do gráfico gerado: [https://drive.google.com/file/d/1s0KBykbL_xd1E3sURQpfwE0hi2b5Dfp_/view?usp=sharing](https://drive.google.com/file/d/1s0KBykbL_xd1E3sURQpfwE0hi2b5Dfp_/view?usp=sharing)
 # Backend e PostgreSQL
 
 Analisando o arquivo `main.py` disposto na pasta backend é nesse arquivo que estão dispostas as rotas desse sistema que executam a preição do modelo, acessam o banco de dados para o salvamento dos logs e faz o upload dos arquivos selecionados para que o modelo possa ser retreinado.
@@ -29,4 +30,4 @@ Com base nessa breve explicação do backend, optou-se por utilizar um banco de 
 
 Por fim, para poder ver os dados armazenados no backend dos logs, acesse `http://localhost:8000/logs` e poderá visualizar todos os valores armazenados das rotas acessadas.
 
-Por fim, para ver o funcionamento dos logs do sistema que foi a escolha de armazanar no PostgreSQL pode-se ver nesse link: [https://drive.google.com/file/d/1lER2wdU0iyqiWp08jSyshyLiGdRFNZHA/view?usp=sharing](https://drive.google.com/file/d/1lER2wdU0iyqiWp08jSyshyLiGdRFNZHA/view?usp=sharing). No vídeo fica claro que os dados são estruturados e reforça ainda mais o do motivo da escolha de um banco de dados relacional.
+Por fim, para ver o funcionamento dos logs do sistema que foi a escolha de armazanar no PostgreSQL pode-se ver nesse link: [https://drive.google.com/file/d/1P5jWHP2vLQkdv0MNc5089qIvZHXzTZ7u/view?usp=sharing](https://drive.google.com/file/d/1P5jWHP2vLQkdv0MNc5089qIvZHXzTZ7u/view?usp=sharing). No vídeo fica claro que os dados são estruturados e reforça ainda mais o do motivo da escolha de um banco de dados relacional.
