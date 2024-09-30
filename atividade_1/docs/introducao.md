@@ -6,6 +6,9 @@ Nesse sentido, para ver mais aprofundamente sobre as especificações de como fo
 
 Sendo assim, os modelos escolhidos para esse projetos forma: GARCH e o Arima. Cabe auqi uma breve explicação de cada um dos modelos escolhidos. Nesse sentido, o GARCH foi escolhido por referências acâdemicas na área de ecnomia, pois ele é indicado para modelar a volatilidade variando no tempo de determiandas séries, assim podemos ter acesso a volatibilidade do Bitcoin pelo tempo e indicar para quando se deve comprar ou não. Já o Arima, foi utilizado para avaliar os valores futuros que o Bitcoin pode assumir para que se pudesse ter valores futuros a indicar para pessoa comprar.
 
+Obs: A implmentação da base de dados não foi exatmaente por uma API, pois como falado com o orientador o site que disponibilizava os dados não possuia uma API para fazer a requisição dos dados. Sendo assim, foi baixada uma base do site para realizar o retreinamento.
+
+
 # Execução do projeto:
 
 Por fim esse projeto pode ser executado da seguindo os passos abaixo:
